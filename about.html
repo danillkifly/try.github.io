@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+
+    <link rel="icon" type="image/x-icon" href="img/pp-menu.png" />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Header Start -->
+    <header id="header">
+      <div class="container">
+        <a href="danillkifly.html" class="logo">
+          <img
+            src="img/2.png"
+            width="60%"
+            height="60%"
+            alt=""
+            class="img-fluid"
+          />
+        </a>
+
+        <ul class="menu">
+          <li class="menu_item">
+            <a href="danillkifly.html" class="menu_link">Home</a>
+          </li>
+          <li class="menu_item">
+            <a href="about.html" class="menu_link active-link">About</a>
+          </li>
+          <li class="menu_item">
+            <a href="blog.html" class="menu_link">Blog</a>
+          </li>
+          <li class="menu_item">
+            <a href="contact.html" class="menu_link">Contact</a>
+          </li>
+          <ion-icon name="close-outline" class="close_icon"></ion-icon>
+        </ul>
+        <ion-icon name="menu-outline" class="toggle_icon"></ion-icon>
+      </div>
+    </header>
+    <!-- Header End -->
+
+    <main>
+      <section class="about section" id="about">
+        <h2 class="section_title">ABOUT</h2>
+      </section>
+
+      <!-- About Content Start -->
+      <section class="about" id="about">
+        <div class="about_container container grid">
+          <div class="about_section">
+            <h3>Danill Kifly</h3>
+          </div>
+          <div class="about_section">
+            <h1>
+              Halo, Danill Kifly disini - Kebetulan iseng aja buat blog ini.
+              Saya lahir tahun 2002, jadi sekarang usiaku
+              <span id="usia"></span>
+              Sedikit informasi blog ini dibuat semasa saya SMP masih suka-suka
+              main ke warnet.
+            </h1>
+          </div>
+        </div>
+      </section>
+      <!-- About Content End -->
+
+      <!-- About Background Start -->
+      <section class="about_bg"></section>
+      <!-- About Background End -->
+
+      <section class="about" id="about">
+        <div class="about_container container">
+          <div class="about_content">
+            <p>
+              Untuk kamu pembaca blog ini, baik yang sengaja nge-klik ataupun
+              tidak, perkenalkan namaku Moh. Kifly Danil. Bisa dipanggil Danil,
+              Kifly juga boleh. Lahir dan besar di kota Banyuwangi, kuliah pun
+              di Banyuwangi ngga pernah keluar jauh-jauh emang. Saya suka joging
+              pagi hari... kalo bangun. Tentang blog ini, apa yang aku tampilkan
+              di blog ini hanya suka-suka ya, terlepas dari kehidupan
+              sehari-hari.
+            </p>
+            <p>
+              Oiya aku suka main game Mobile Legend & PUBG Mobile bisa yok
+              mabar, btw udah pernah Glory dan ngga joki !!! santai aja ngga
+              bakal beban kok. Aku juga suka dengerin lagu slipknot dan bmth
+              musiknya emang keras buat orang-orang yang ngga pernah dengerin,
+              tapi bukan masalah itunya... aku menyebutnya musik energik karena
+              ditelinga berisik, wkwk just kidding. Cuma suka aja dengan
+              lagu-lagunya.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer Start -->
+      <footer>
+        <div class="footer_bg">
+          <div class="footer_container container">
+            <div class="main_footer">
+              <div class="footer_social">
+                <a href="https://www.instagram.com/danillkifly/"
+                  ><ion-icon name="logo-instagram"></ion-icon
+                ></a>
+                <a href="https://twitter.com/danillkifly"
+                  ><ion-icon name="logo-twitter"></ion-icon
+                ></a>
+                <a
+                  href="https://www.youtube.com/channel/UCazK6fSVpdDOhtP-Cjpbd0w"
+                  ><ion-icon name="logo-youtube"></ion-icon
+                ></a>
+              </div>
+            </div>
+            <div class="footer_copy">Copyright &#169; 2024 Danill Kifly</div>
+          </div>
+        </div>
+      </footer>
+      <!-- Footer End -->
+    </main>
+
+    <!-- Typed JS -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- IonIcons -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <!-- Java Script -->
+    <script src="js/script.js"></script>
+
+    <script>
+      // Hitung usia berdasarkan tanggal lahir
+      function hitungUsia(tanggalLahir) {
+        var dob = new Date(tanggalLahir);
+        var sekarang = new Date();
+        var usia = sekarang.getFullYear() - dob.getFullYear();
+
+        // Periksa jika ulang tahun belum terjadi pada tahun ini
+        if (
+          sekarang.getMonth() < dob.getMonth() ||
+          (sekarang.getMonth() == dob.getMonth() &&
+            sekarang.getDate() < dob.getDate())
+        ) {
+          usia--;
+        }
+
+        return usia;
+      }
+
+      // Tentukan tanggal lahir
+      var tanggalLahir = "2002-09-10"; // Format tanggal adalah YYYY-MM-DD
+
+      // Hitung usia berdasarkan tanggal lahir
+      var usia = hitungUsia(tanggalLahir);
+
+      // Tampilkan usia di dalam span dengan id "usia"
+      document.getElementById("usia").innerHTML =
+        "<em>" + usia + "</em> <em>th.</em>";
+    </script>
+  </body>
+</html>
