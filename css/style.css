@@ -872,3 +872,8 @@ header .container {
 .contact .section_title::before {
   width: 190px;
 }
+
+.contact_section h1 {
+  text-align: center;
+  color: #ff0000;
+}
